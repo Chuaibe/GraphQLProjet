@@ -20,8 +20,13 @@ export const getUser = (token: string): JWTUser | null => {
     try {
         return jwt.verify(token, getJwtSecret()) as JWTUser;
     } catch (e) {
-        console.error('JWT verification error:', e);
+        if (e instanceof jwt.TokenExpiredError) {
+            console.error('JWT verification error: Token has expired');
+        } else {
+            console.error('JWT verification error:', e);
+        }
         return null;
+
     }
 };
 
