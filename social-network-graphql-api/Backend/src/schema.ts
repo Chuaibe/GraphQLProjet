@@ -1,6 +1,7 @@
 import { gql } from 'apollo-server';
+import {DocumentNode} from "graphql/language/index.js";
 
-export const typeDefs = gql`
+export const typeDefs: DocumentNode = gql`
   type User {
     id: ID!
     email: String!
