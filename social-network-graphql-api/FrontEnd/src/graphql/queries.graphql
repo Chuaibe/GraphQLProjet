@@ -1,0 +1,41 @@
+query GetPosts {
+  posts {
+    id
+    title
+    content
+    author {
+      name
+    }
+    comments {
+      content
+      author {
+        name
+      }
+    }
+    likes {
+      user {
+        name
+      }
+    }
+  }
+}
+
+mutation LoginUser($email: String!, $password: String!) {
+  login(email: $email, password: $password) {
+    token
+  }
+}
+
+mutation SignupUser($email: String!, $name: String!, $password: String!) {
+  signup(email: $email, name: $name, password: $password) {
+    token
+  }
+}
+
+mutation CreatePost($title: String!, $content: String!) {
+  createPost(title: $title, content: $content) {
+    id
+    title
+    content
+  }
+}
