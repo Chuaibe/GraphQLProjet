@@ -108,6 +108,7 @@ export type Post = {
   author: User;
   comments: Array<Comment>;
   content: Scalars['String']['output'];
+  createdAt: Scalars['String']['output'];
   id: Scalars['ID']['output'];
   likes: Array<Like>;
   title: Scalars['String']['output'];
@@ -120,6 +121,8 @@ export type Query = {
   postComments: Array<Comment>;
   postLikes: Array<Like>;
   posts: Array<Post>;
+  postsByAuthor: Array<Post>;
+  postsByLikes: Array<Post>;
   users: Array<User>;
 };
 
@@ -136,6 +139,11 @@ export type QueryPostCommentsArgs = {
 
 export type QueryPostLikesArgs = {
   postId: Scalars['ID']['input'];
+};
+
+
+export type QueryPostsByAuthorArgs = {
+  authorId: Scalars['ID']['input'];
 };
 
 export type User = {
@@ -282,6 +290,7 @@ export type PostResolvers<ContextType = DataSourceContext, ParentType extends Re
   author?: Resolver<ResolversTypes['User'], ParentType, ContextType>;
   comments?: Resolver<Array<ResolversTypes['Comment']>, ParentType, ContextType>;
   content?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
+  createdAt?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
   id?: Resolver<ResolversTypes['ID'], ParentType, ContextType>;
   likes?: Resolver<Array<ResolversTypes['Like']>, ParentType, ContextType>;
   title?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
@@ -294,6 +303,8 @@ export type QueryResolvers<ContextType = DataSourceContext, ParentType extends R
   postComments?: Resolver<Array<ResolversTypes['Comment']>, ParentType, ContextType, RequireFields<QueryPostCommentsArgs, 'postId'>>;
   postLikes?: Resolver<Array<ResolversTypes['Like']>, ParentType, ContextType, RequireFields<QueryPostLikesArgs, 'postId'>>;
   posts?: Resolver<Array<ResolversTypes['Post']>, ParentType, ContextType>;
+  postsByAuthor?: Resolver<Array<ResolversTypes['Post']>, ParentType, ContextType, RequireFields<QueryPostsByAuthorArgs, 'authorId'>>;
+  postsByLikes?: Resolver<Array<ResolversTypes['Post']>, ParentType, ContextType>;
   users?: Resolver<Array<ResolversTypes['User']>, ParentType, ContextType>;
 };
 

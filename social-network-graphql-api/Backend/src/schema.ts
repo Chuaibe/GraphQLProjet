@@ -18,6 +18,7 @@ export const typeDefs: DocumentNode = gql`
         author: User!
         comments: [Comment!]!
         likes: [Like!]!
+        createdAt: String!
     }
 
     type Comment {
@@ -40,6 +41,8 @@ export const typeDefs: DocumentNode = gql`
         post(id: ID!): Post
         postComments(postId: ID!): [Comment!]!
         postLikes(postId: ID!): [Like!]!
+        postsByAuthor(authorId: ID!): [Post!]!
+        postsByLikes: [Post!]!
     }
 
     type Mutation {
