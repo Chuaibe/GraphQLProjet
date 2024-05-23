@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { useMutation, gql } from '@apollo/client';
+import React, { useState, useEffect } from 'react';
+import { useMutation, gql, useQuery } from '@apollo/client';
 import { useNavigate } from 'react-router-dom';
 import './CreatePostPage.css';
 
@@ -13,17 +13,60 @@ const CREATE_POST = gql`
   }
 `;
 
+const GET_POSTS = gql`
+  query GetPosts {
+    posts {
+      id
+      title
+      content
+      author {
+        name
+      }
+      comments {
+        content
+        author {
+          name
+        }
+      }
+      likes {
+        user {
+          name
+        }
+      }
+    }
+  }
+`;
+
+const GET_CURRENT_USER = gql`
+  query GetCurrentUser {
+    me {
+      id
+    }
+  }
+`;
+
 const CreatePostPage: React.FC = () => {
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');
-    const [createPost, { loading, error }] = useMutation(CREATE_POST);
+    const [createPost, { loading, error }] = useMutation(CREATE_POST, {
+        refetchQueries: [{ query: GET_POSTS }],
+    });
+    const { data, loading: userLoading } = useQuery(GET_CURRENT_USER);
     const navigate = useNavigate();
+
+    useEffect(() => {
+        if (!userLoading && !data?.me) {
+            navigate('/login');
+        }
+    }, [userLoading, data, navigate]);
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         await createPost({ variables: { title, content } });
         navigate('/');
     };
+
+    if (userLoading) return <p>Loading...</p>;
 
     return (
         <div className="create-post-container">

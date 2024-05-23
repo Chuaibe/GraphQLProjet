@@ -58,6 +58,52 @@
     line-height: 1.6;
 }
 
+.filters {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.filters button,
+.filters input {
+    margin-right: 10px;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.filters button {
+    background-color: #f8f8f8;
+    cursor: pointer;
+}
+
+.filters button:hover {
+    background-color: #e0e0e0;
+    border-color: #aaa;
+}
+
+.filters input {
+    flex: 1;
+    min-width: 150px;
+}
+
+.filters input::placeholder {
+    color: #aaa;
+}
+
+.filters button:focus,
+.filters input:focus {
+    outline: none;
+    border-color: #4caf50;
+}
+
+.filters button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+
 .post-author {
     font-style: italic;
     color: #888;
@@ -209,4 +255,18 @@
 .edit-post-form button:hover:not(:disabled) {
     background-color: #004d40;
     transform: translateY(-2px);
+}
+
+.delete-like-button {
+    background: none;
+    border: none;
+    color: red;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.delete-like-button:hover {
+    color: darkred;
 }
