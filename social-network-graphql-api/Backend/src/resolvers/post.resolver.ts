@@ -10,12 +10,39 @@ const postResolvers: Resolvers = {
                     comments: true,
                     likes: true,
                 },
+                orderBy: {
+                    createdAt: 'desc',
+                }
             });
         },
-        post: async (_parent, { id }, context) => {
+        post: async (_parent, {id}, context) => {
             return context.dataSources.client.post.findUnique({
-                where: { id: Number(id) },
-                include: { author: true, comments: true, likes: true },
+                where: {id: Number(id)},
+                include: {author: true, comments: true, likes: true},
+            });
+        },
+        postsByAuthor: async (_parent, {authorId}, context) => {
+            return context.dataSources.client.post.findMany({
+                where: {authorId: Number(authorId)},
+                include: {
+                    author: true,
+                    comments: true,
+                    likes: true,
+                },
+            });
+        },
+        postsByLikes: async (_parent, _args, context) => {
+            return context.dataSources.client.post.findMany({
+                include: {
+                    author: true,
+                    comments: true,
+                    likes: true,
+                },
+                orderBy: {
+                    likes: {
+                        _count: 'desc',
+                    },
+                },
             });
         },
     },
