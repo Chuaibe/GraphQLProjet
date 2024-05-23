@@ -4,73 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f3dc8d8-6e4a-4f73-8ad2-5a570ef05dce" name="Changes" comment="✨Introduce new feature">
-      <change afterPath="$PROJECT_DIR$/social-network-graphql/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/Backend/.env.example" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/Backend/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/Backend/.prettierrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/Backend/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/Backend/codegen.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/Backend/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/Backend/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/Backend/scripts/register.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/Backend/src/context.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/Backend/src/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/Backend/src/infrastructure/client.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/Backend/src/infrastructure/prisma/dev.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/Backend/src/infrastructure/prisma/migrations/20240521110338_init/migration.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/Backend/src/infrastructure/prisma/migrations/20240522140632_add_delete_on_cascade/migration.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/Backend/src/infrastructure/prisma/migrations/20240523131427_add_created_at_to_post/migration.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/Backend/src/infrastructure/prisma/migrations/migration_lock.toml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/Backend/src/infrastructure/prisma/schema.prisma" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/Backend/src/module/auth.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/Backend/src/resolvers.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/Backend/src/resolvers/comment.resolver.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/Backend/src/resolvers/like.resolver.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/Backend/src/resolvers/post.resolver.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/Backend/src/resolvers/user.resolver.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/Backend/src/schema.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/Backend/src/types.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/Backend/tsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/FrontEnd/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/FrontEnd/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/FrontEnd/codegen.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/FrontEnd/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/FrontEnd/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/FrontEnd/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/FrontEnd/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/FrontEnd/public/logo192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/FrontEnd/public/logo512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/FrontEnd/public/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/FrontEnd/public/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/FrontEnd/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/FrontEnd/src/App.test.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/FrontEnd/src/App.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/FrontEnd/src/apolloClient.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/FrontEnd/src/components/CommentForm.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/FrontEnd/src/components/Filter.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/FrontEnd/src/components/LikeButton.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/FrontEnd/src/components/NavBar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/FrontEnd/src/components/NavBar.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/FrontEnd/src/components/Post.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/FrontEnd/src/graphql/queries.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/FrontEnd/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/FrontEnd/src/index.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/FrontEnd/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/FrontEnd/src/pages/CreatePostPage.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/FrontEnd/src/pages/CreatePostPage.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/FrontEnd/src/pages/HomePage.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/FrontEnd/src/pages/HomePage.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/FrontEnd/src/pages/LoginPage.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/FrontEnd/src/pages/LoginPage.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/FrontEnd/src/pages/SignupPage.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/FrontEnd/src/pages/SignupPage.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/FrontEnd/src/react-app-env.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/FrontEnd/src/reportWebVitals.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/FrontEnd/src/setupTests.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-graphql-api/FrontEnd/tsconfig.json" beforeDir="false" />
-    </list>
+    <list default="true" id="8f3dc8d8-6e4a-4f73-8ad2-5a570ef05dce" name="Changes" comment="✨Introduce new feature" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -153,7 +87,7 @@
       <workItem from="1716399674226" duration="758000" />
       <workItem from="1716402137370" duration="2083000" />
       <workItem from="1716469039001" duration="19182000" />
-      <workItem from="1716489656288" duration="2163000" />
+      <workItem from="1716489656288" duration="2386000" />
     </task>
     <task id="LOCAL-00001" summary="🥅 Catch error">
       <option name="closed" value="true" />
@@ -227,7 +161,23 @@
       <option name="project" value="LOCAL" />
       <updated>1716489138414</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="✨Introduce new feature">
+      <option name="closed" value="true" />
+      <created>1716491916403</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1716491916403</updated>
+    </task>
+    <task id="LOCAL-00011" summary="✨Introduce new feature">
+      <option name="closed" value="true" />
+      <created>1716491996513</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1716491996513</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
